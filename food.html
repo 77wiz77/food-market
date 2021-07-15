@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodMarket</title>
+  <!--убрать системные стили (по умолчанию)-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+  <header>
+    <div class="menu">
+      <div class="menu-burger">
+        <span></span>
+      </div>
+      <nav>
+        <ul class="header-menu">
+          <li><a href="#Action" class="scroll-to">Акции</a></li>
+          <li><a href="#Delivery">Доставка</a></li>
+          <li><a href="#Review">Отзывы</a></li>
+          <li><a href="#QA">Вопрос - ответ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="second-menu">
+      <div class="bg-white">
+        <div class="header">
+          <div class="wrapper">
+            <div class="header-top">
+              <div class="logo"><span class="logo-image"></span> <span>FOODMARKET</span></div>
+              <div class="header-info">
+                <span>8 (999) 999-99-99</span>
+                <button type="button">Обратный звонок</button>
+              </div>
+            </div>
+            <!--тег для линии-->
+            <hr>
+            <!--для меню внизу-->
+            <div class="wrapper">
+              <div class="header-bottom">
+                <ul class="nav">
+                  <li><a href="">Горячее</a></li>
+                  <li><a href="">Супы</a></li>
+                  <li><a href="">Салаты</a></li>
+                  <li><a href="">Гарниры</a></li>
+                  <li><a href="">Соусы</a></li>
+                  <li><a href="">Напитки</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner">
+      <!--класс с содержимым контента-->
+      <div class="wrapper">
+        <div class="text-banner">
+          <h1 class="title">Скидка в честь Дня Рождения</h1>
+          <p>При заказе в день своего рождения представляется скидка 20% (требуется показать курьеру подтверждающий документ с датой рождения)</p>
+          <a class="btn" href="#">Подробнее</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="up"></section>
+
+    <section class="catalog">
+      <div class="wrapper">
+        <div class="grid">
+          <div class="grid-item grid-item-title">
+            <h2 class="title-h2" id="#Action">Специальные предложения</h2>
+          </div>
+          <div class="grid-item grid-item-img">
+            <img src="assets/img/car.svg" alt="Delivery">
+          </div>
+          <div class="grid-item grid-item-catalog">
+            <div class="bg-white">
+              <div class="thumb">
+                <img class="img-food" src="assets/img/lasagna.png" alt="Lasagna">
+              </div>
+              <p class="grid-title">Лазанья</p>
+              <p class="grid-price">150 Р</p>
+              <a class="grid-btn" href="#">Купить</a>
+            </div>
+          </div>
+          <div class="grid-item grid-item-catalog">
+            <div class="bg-white">
+              <div class="thumb">
+                <img class="img-food" src="assets/img/kiev.png" alt="kiev">
+              </div>
+              <p class="grid-title">Котлета по-киевски</p>
+              <p class="grid-price">150 Р</p>
+              <a class="grid-btn" href="#">Купить</a>
+            </div>
+          </div>
+          <div class="grid-item grid-item-catalog">
+            <div class="bg-white">
+              <div class="thumb">
+                <img class="img-food" src="assets/img/soup.png" alt="Soup">
+              </div>
+              <p class="grid-title">Суп с фрикадельками</p>
+              <p class="grid-price">150 Р</p>
+              <a class="grid-btn" href="#">Купить</a>
+            </div>
+          </div>
+          <div class="grid-item grid-item-catalog">
+            <div class="bg-white">
+              <div class="thumb">
+                <img class="img-food" src="assets/img/meatball.png" alt="Meatball">
+              </div>
+              <p class="grid-title">Рыбные тефтели</p>
+              <p class="grid-price">200 Р</p>
+              <a class="grid-btn" href="#">Купить</a>
+            </div>
+          </div>
+          <div class="grid-item grid-item-left">
+            <div class="bg-purple">
+              <div class="bg-purple-item">
+                <h3>Получайте бонусы <bg> и подарки</h3>
+                <p>Каждый месяц разыгрываем промокоды со скидкой</p>
+                <input type="email" placeholder="Введите e-mail">
+              </div>
+                <img class="bg-purple-img" src="assets/img/envelope.svg" alt="Envelope">
+            </div>
+          </div>
+          <div class="grid-item grid-item-right">
+            <div class="bg-purple">
+              <div class="bg-purple-item">
+                <h3>Заходим к нам</h3>
+                <p>Всегда рады новым клиентам, <br> добро пожаловать</p>
+                <a class="btn" href="#">Карта магазина</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-window">
+
+    </section>
+
+    <section>
+      <div class="wrapper">
+        <div class="title-form">Наше местоположение</div>
+        <div class="map">
+          <img src="assets/img/map.png" alt="Map">
+          <ul class="marker">
+            <li><span class="in"> </span>В черте города от 500 руб доставка бесплатно</li>
+            <br>
+            <li><span class="out"> </span>За чертой города и ниже 500 руб - доставка: 150 руб</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrapper">
+        <form action="#" class="form-bottom">
+          <img class="form-logo" src="assets/img/Logo.svg" alt="">
+          <div class="title-form">Написать отзыв</div>
+          <input type="text" id="name" placeholder="Как к вам обращаться?" required>
+          <input type="text" id="phone" placeholder="Введите ваш номер телефона" required>
+          <input type="text" id="email" placeholder="Введите ваш email" required>
+          <input type="text" id="question" placeholder="Ваш отзыв" required>
+          <button type="submit" value="Отправить">Отправить отзыв</button>
+        </form>
+      </div>
+      
+    </section class="review">
+      <div class="wrapper">
+        <div class="flex">
+          <div class="flex-item">
+
+          </div>
+          <div class="flex-item">
+            
+          </div>
+          <div class="flex-item">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="bg-white">
+      <div class="wrapper">
+        <div class="footer-top">
+          <div class="footer-top-item">
+            <ul class="social">
+              <li class="social-item"><a class="social-link social-youtube" href="#" target="_blank"></a></li>
+              <li class="social-item"><a class="social-link social-vk" href="#" target="_blank"></a></li>
+              <li class="social-item"><a class="social-link social-fb" href="#" target="_blank"></a></li>
+              <li class="social-item"><a class="social-link social-instagram" href="#" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div class="footer-info">
+            <span>222000, ул. Ленина 100</span>
+            <span>8 (999) 999-99-99</span>
+            <button type="button">Обратный звонок</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="footer-bottom">
+        <p>ИП Example (с) 2019 Все права защищены. Магазин готовой еды</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+    
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>
