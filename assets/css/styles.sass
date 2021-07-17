@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+//Переменные
+$first-color: #e2177c
+$background-color: #EFEFEF
+
+body
+  background-color: $background-color
+  font-family: 'Roboto', sans-serif
+  color: #333333
+  font-size: 16px
+
+main
+  margin-top: 3.25rem
+
+.wrapper
+  max-width: 1100px
+  padding: 0 1rem
+  margin: 0 auto
+
+.header
+  background-color: white
+  padding-top: inherit
+  padding-top: 4px
+  &-menu
+    position: fixed
+    width: 100%
+    top: 0
+    background-color: $first-color
+    display: flex
+    list-style-type: none
+    justify-content: center
+    padding: 0.5rem
+    margin: 0
+    flex-wrap: wrap
+    > li
+      margin: 10px 1rem
+      > a
+        text-decoration: none
+        color: white
+        transition: 0.2 ease
+        &:hover
+          color: black
+  &-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 15px 0px 12px 0
+  &-info
+    span
+      font-size: 16px
+    button
+      font-size: 14px
+      border-radius: 20px; 
+      border: 2px solid $first-color
+      background-color: transparent
+      padding: 10px 25px
+      margin-left: 36px
+      transition: 0.2s ease
+      cursor: pointer
+      &:hover
+        background-color: $first-color
+        color: white
+  &-bottom
+    padding: 20px 0 17px 0
+    .nav
+      font-size: 16px
+      margin: 0
+      > li
+        margin: 0 20px
+        margin-bottom: 10px
+
+.nav
+  display: flex
+  list-style-type: none
+  justify-content: center
+  padding: 4px 0
+  flex-wrap: wrap
+  margin-bottom: 4px
+  > li 
+    margin: 10px 1rem
+    > a
+      text-decoration: none
+      color: #333333
+      transition: 0.2 ease
+      &:hover
+        color: $first-color
+
+.logo
+  color: $first-color
+  font-size: 36px
+  font-weight: 700
+  display: flex
+  align-items: center
+  letter-spacing: 4px
+  &-image
+    display: block
+    width: 80px
+    height: 80px
+    background-image: url(../img/logo.svg)
+    margin-right: 20px
+
+hr
+  border: none
+  background-color: #EFEFEF
+  height: 1px
+
+/*Основной контент*/
+
+.banner
+  background-image: url(../img/background.png);
+  padding-top: 10rem
+  padding-bottom: 12rem
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: bottom center
+  color: white
+  margin-bottom: 2rem
+  p
+    margin-bottom: 57px
+    margin-left: 30rem
+    max-width: 40rem
+    line-height: 1.5
+  &-text
+    text-align: right
+    p
+      text-align: right
+
+.title
+  font-size: 48px
+  font-weight: 700
+  margin-bottom: 39px
+  &-h2
+    font-size: 24px
+    font-weight: 700
+
+.btn
+  color:white
+  text-decoration: none
+  border-radius: 20px
+  border: 2px solid white
+  background-color: transparent
+  padding: 9px 47px
+  transition: 0.2s ease
+  &:hover
+    background-color: white
+    color: black
+
+.bg
+  &-white
+    background-color: white
+  &-purple
+    background-color: $first-color
+    color: white
+    padding: 34px 41px
+    display: flex
+    justify-content: space-between
+    &-item
+      flex: 0 0 55%
+    &-img
+      flex: 0 0 31%
+      text-align: center
+    h3
+      font-size: 18px
+      font-weight: 700
+      margin-top: 0
+      margin-bottom: 20px
+    p
+      line-height: 1.5
+      margin-bottom: 24px
+    input 
+      font-size: 14px;
+      border: 1px solid #fff;
+      border-radius: 20px;
+      padding: 9px 15px;
+      width: 15rem;
+      box-sizing: border-box;
+      &:focus
+        outline: none
+    .btn
+      display: block
+      text-align: center
+      max-width: 166px
+      padding: 8px 0
+
+.catalog
+  padding-top: 2rem
+  padding-bottom: 3rem
+
+.grid
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 19px 30px
+  &-item
+    &-title
+      grid-column: 1 / 4
+      grid-row: 1 / 2
+    &-img
+      grid-column: 4 / 5
+      grid-row: 1 / 2
+      text-align: center
+    &-left
+      grid-column: 1 / 3
+      grid-row: 3 / 4
+      margin-top: 40px
+    &-right
+      grid-column: 3 / 5
+      grid-row: 3 / 4
+      margin-top: 40px
+    &-catalog
+      text-align: center
+      .bg-white
+        padding: 23px 30px 34px 30px
+  &-title
+    line-height: 1.5
+    font-size: 1em
+    margin-bottom: 0
+    text-overflow: ellipsis
+  &-price
+    font-size: 21px
+    font-weight: 500
+    margin-top: 14px
+    letter-spacing: 1px
+    margin-bottom: 25px
+  &-btn
+    border-radius: 20px
+    border: 2px solid $first-color
+    background-color: $first-color
+    color: white
+    padding: 6px 41px
+    text-decoration: none
+    transition: 0.2s ease
+    cursor: pointer
+    &:hover
+      background-color: white
+      color: black
+
+.img-food
+  width: 12rem
+  height: 6rem
+
+.trumb
+  margin-bottom: 14px
+
+/*Расположение / карта*/
+.map
+  display: flex
+  flex-direction: column
+  justify-content: center
+  background-color: white
+  margin-top: 2.2rem
+  margin-bottom: 4rem
+  img
+    width: 100%
+    height: 100%
+    background-repeat: no-repeat
+    background-size: auto
+    background-position: center center
+    margin-bottom: 0.7rem
+
+.marker
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin: 1rem auto 1.5rem auto
+  padding: 0 30px 0
+  list-style: none
+
+.in
+  display: inline
+  background-color: #BFB4E9
+  padding: 1px 5px
+  margin-bottom: 1rem
+  margin-right: 5px
+
+.out
+  display: inline
+  background-color: #BCE3C7
+  padding: 1px 5px
+  margin-bottom: 1rem
+  margin-right: 5px
+
+/*Форма*/
+
+.form
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin: auto
+  width: 50%
+  color: white
+  background-color: $first-color
+  padding: 2rem
+  margin-bottom: 4rem
+  &-logo
+    width: 10rem
+    height: 10rem
+    margin: 1rem auto
+  &-title
+    font-size: 1.5rem
+    font-weight: 700
+    margin-bottom: 1.5rem
+  input
+    display: block
+    width: 60%
+    padding: 0 3rem
+    margin-bottom: 0.7rem
+    background-color: white
+    color: $first-color
+    line-height: 2.5em
+    border-width: 0
+    border-radius: 1rem
+  button
+    display: block
+    text-align: center
+    max-width: 20rem
+    margin-top: 1rem
+    padding: 8px 2rem
+    border-radius: 2rem
+    border-width: 1rem
+    border: 2px solid white
+    color: white
+    background-color: $first-color
+    transition: 0.2s ease
+    &:hover
+      background-color: white
+      color: black
+
+/*footer*/
+
+.footer
+  &-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 25px
+    padding-bottom: 23px
+  &-info
+    display: flex
+    align-items: center
+    span
+      font-size: 16px
+      margin-left: 103px
+      &:first-child
+        font-size: 14px
+        margin-left: 0
+    button
+      font-size: 14px
+      border-radius: 20px
+      border: 2px solid $first-color
+      background-color: transparent
+      padding: 10px 25px
+      margin-left: 36px 
+      transition: 0.2s ease
+      cursor: pointer
+      &:hover
+        background-color: $first-color
+        color: #fff
+  &-bottom
+    display: flex
+    justify-content: space-between
+    color: #828282
+    padding: 26px 0
+    font-size: 12px
+    a
+      text-decoration: none
+      color: #828282
+      transition: 0.2s ease
+      &:hover
+        color: $first-color
+    p
+      margin: 0
+  
+
+/*выводим изображения кнопок для соц сетей в ссылки*/
+.social
+  display: flex
+  align-items: center
+  list-style-type: none
+  padding-left: 0
+  &-item
+    margin-right: 20px
+    &:last-child
+      margin-right: 0
+  &-link
+    display: block
+    width: 40px
+    height: 40px
+    border: 2px solid $first-color
+    border-radius: 100%
+    background-repeat: no-repeat
+    background-position: center center
+    &:hover
+      background-color: $first-color
+  &-youtube
+    background-image: url(../img/youtube.svg)
+  &-vk
+    background-image: url(../img/vk.svg)
+  &-fb
+    background-image: url(../img/facebook.svg)
+  &-instagram
+    background-image: url(../img/ins.svg)
+  

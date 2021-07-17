@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    /*COLORS*/
+    --first-color: #e2177c;
+    --background-color: #EFEFEF;
+}
+
+body{ /*для всего макета*/
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    font-size: 16px; /*размер шрифта для всего документа по умолчанию*/
+}
+
+.wrapper{ /*класс для ширины основного контента*/
+    max-width: 1100px;
+    padding: 0 1rem;
+    margin: 0 auto; /*сделать блок автоматически по центру*/
+}
+
+/*header*/
+main{
+    margin-top: 3.25rem;
+}
+
+.header-menu{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--first-color);
+    display: flex; /*превратить вертикальный список в горизонтальный*/
+    list-style-type: none; /*убрать точки у пунктов*/
+    justify-content: center; /*выравнить flex объекты по центру, по горизонтали*/
+    padding: 0.5rem;
+    margin: 0;
+    flex-wrap: wrap; /*для адаптивности, при сжатии навигация становится друг под друга*/
+}
+
+.nav{
+    display: flex; /*превратить вертикальный список в горизонтальный*/
+    list-style-type: none; /*убрать точки у пунктов*/
+    justify-content: center; /*выравнить flex объекты по центру, по горизонтали*/
+    padding: 4px 0;
+    flex-wrap: wrap; /*для адаптивности, при сжатии навигация становится друг под друга*/
+    margin-bottom: 4px;
+}
+
+.nav > li, .header-menu > li{ /*только для этого тега li внутри nav*/
+    margin: 10px 1rem;
+}
+
+.header-menu > li > a{
+    text-decoration: none; /*чтобы убрать подчеркивание внизу*/
+    color: white;
+    transition: 0.2 ease;
+}
+
+.nav > li > a{
+    text-decoration: none; /*чтобы убрать подчеркивание внизу*/
+    color: #333333;
+    transition: 0.2 ease;
+}
+
+.nav > li > a:hover{
+    color: var(--first-color);
+}
+
+.header-menu > li > a:hover{
+    color: black;
+}
+
+.header{ /*для кастомного класса header*/
+    background-color: white;
+    padding-top: inherit;
+    padding-top: 4px;
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between; /*расположить с максимальным расстоянием между элементами*/
+    align-items: center; /*выравнивание элементов в блоке flex по центру, по вертикали*/
+    padding: 15px 0px 12px 0; /*пространство над и под блоком*/
+}
+
+.logo{
+    color: var(--first-color);
+    font-size: 36px;
+    font-weight: 700; /*жирность*/
+    display: flex;
+    align-items: center; /*выравнивание элементов в блоке flex по центру, по вертикали*/
+    letter-spacing: 4px;
+}
+
+.logo-image{
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/logo.svg);
+    margin-right: 20px;
+}
+
+.header-info span{
+    font-size: 16px;
+}
+
+.header-info button{
+    font-size: 14px;
+    border-radius: 20px; /*скругление кнопки*/
+    border: 2px solid var(--first-color);
+    background-color: transparent; /*прозрачный фон*/
+    padding: 10px 25px;
+    margin-left: 36px; /*отодвинуть кнопку от номера телефона*/
+    transition: 0.2s ease; /*длительность анимации, в середине ускоряется*/
+    cursor: pointer; /*смена курсора при наведении на кнопку*/
+}
+
+.header-info button:hover{ /*изменение при наведении на кнопку Обратный звонок*/
+    background-color: var(--first-color);
+    color: white;
+}
+
+.header-bottom{
+    padding: 20px 0 17px 0; /*оступ снизу и сверху для второй панели навигации*/
+}
+
+.header-bottom .nav{
+    font-size: 16px;
+    margin: 0;
+}
+
+.header-bottom .nav > li{
+    margin: 0 20px;
+    margin-bottom: 10px;
+}
+
+hr{
+    border: none;
+    background-color: #EFEFEF;
+    height: 1px;
+}
+
+/*Основной контент*/
+
+.banner{
+    background-image: url(../img/background.png);
+    padding-top: 10rem; /*отступ для отрисовки фона*/
+    padding-bottom: 12rem;
+    background-repeat: no-repeat; /*не повторять изображение*/
+    background-size: cover; /*размер фонового изображения, масштабируется с сохранением пропорций изображения*/
+    background-position: bottom center; /*позиция по центру как по х так и по у, благодаря этому масштабирование идет от центра*/
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.banner p{
+    margin-bottom: 57px;
+    margin-left: 30rem;
+    max-width: 40rem;
+    line-height: 1.5;
+}
+
+.text-banner{
+    text-align: right;
+}
+
+.text-banner p{
+    text-align: right;
+}
+
+.title{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 39px;
+}
+
+.title-h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.btn{
+    color:white;
+    text-decoration: none;
+    border-radius: 20px; /*скругление кнопки*/
+    border: 2px solid white;
+    background-color: transparent; /*прозрачный фон*/
+    padding: 9px 47px;
+    transition: 0.2s ease; /*длительность анимации, в середине ускоряется*/
+}
+
+.btn:hover{
+    background-color: white;
+    color: black
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.bg-purple{
+    background-color: var(--first-color);
+    color: white;
+    padding: 34px 41px;
+    display: flex; /*превратить вертикальный список в горизонтальный*/
+    justify-content: space-between;
+}
+
+.bg-purple-item{ /*ширина блока, относительно внешнего блока*/
+    flex: 0 0 55%;
+}
+
+.bg-purple-img{
+    flex: 0 0 31%;
+    text-align: center;
+}
+
+.bg-purple h3{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.bg-purple p{
+    line-height: 1.5; /*межстрочный интервал*/
+    margin-bottom: 24px;
+}
+
+.bg-purple input{
+    font-size: 14px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 9px 15px;
+    width: 15rem;
+    box-sizing: border-box;
+}
+
+.bg-purple input:focus{ /*при активации*/
+    outline: none; /*убрать выделение*/
+}
+
+.bg-purple .btn{
+    display: block;
+    text-align: center;
+    max-width: 166px;
+    padding: 8px 0;
+}
+
+.catalog{
+    padding-top:2rem;
+    padding-bottom: 3rem;
+}
+
+.grid{ /*Работа с сеткой: 4 колонки и 3 строки*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*разбить на 4 колонки*/
+    grid-gap: 19px 30px; /*расстояние между блоками*/
+}
+
+/*Для карточек не пишем грид, так как они на основе других гридов выстраиваются правильно*/
+
+.grid-item-title{
+    grid-column: 1 / 4; /*между первой и четвертой линией по вертикали*/
+    grid-row: 1 / 2; /*между первой и второй по горизонтали*/
+}
+
+.grid-item-img{
+    grid-column: 4 / 5; /*между первой и четвертой линией по вертикали*/
+    grid-row: 1 / 2; /*между первой и второй по горизонтали*/
+    text-align: center; /*выравнить машину по центру*/
+}
+
+.grid-item-left{
+    grid-column: 1 / 3; /*между первой и четвертой линией по вертикали*/
+    grid-row: 3 / 4; /*между первой и второй по горизонтали*/
+    margin-top: 40px;
+}
+
+.grid-item-right{
+    grid-column: 3 / 5; /*между первой и четвертой линией по вертикали*/
+    grid-row: 3 / 4; /*между первой и второй по горизонтали*/
+    margin-top: 40px;
+}
+
+.grid-item-catalog{
+    text-align: center;
+}
+
+.grid-item-catalog .bg-white{ /*для bg-white внутри grid-item-catalog*/
+    padding: 23px 30px 34px 30px;
+}
+
+.img-food{
+    width: 12rem; /*размер относительно шрифта элемента html*/
+    height: 6rem;
+}
+
+.trumb{
+    margin-bottom: 14px;
+}
+
+.grid-title{
+    line-height: 1.5;
+    font-size: 1em;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+}
+
+.grid-price{
+    font-size: 21px;
+    font-weight: 500;
+    margin-top: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.grid-btn{
+    border-radius: 20px; /*скругление кнопки*/
+    border: 2px solid var(--first-color);
+    background-color: var(--first-color); /*прозрачный фон*/
+    color: white;
+    padding: 6px 41px;
+    text-decoration: none;
+    transition: 0.2s ease; /*длительность анимации, в середине ускоряется*/
+    cursor: pointer; /*смена курсора при наведении на кнопку*/
+}
+
+.grid-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+/*Расположение / карта*/
+
+.map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;/*выравнить flex объекты по центру, по горизонтали*/
+    background-color: white;
+    margin-top: 2.2rem;
+    margin-bottom: 4rem;
+}
+
+.map img{/*сделать адаптивной карту и зафиксированным меню*/
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat; /*не повторять изображение*/
+    background-size: auto; /*размер фонового изображения, масштабируется с сохранением пропорций изображения*/
+    background-position: center center; /*позиция по центру как по х так и по у, благодаря этому масштабирование идет от центра*/
+    margin-bottom: 0.7rem;
+}
+
+.marker{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem auto 1.5rem auto;
+    padding: 0 30px 0;
+    list-style: none;
+}
+
+.in{
+    display: inline;
+    background-color: #BFB4E9;
+    padding: 1px 5px;
+    margin-bottom: 1rem;
+    margin-right: 5px;
+}
+
+.out{
+    display: inline;
+    background-color: #BCE3C7;
+    padding: 1px 5px;
+    margin-bottom: 1rem;
+    margin-right: 5px;
+}
+
+/*Форма*/
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    color: white;
+    background-color: var(--first-color);
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
+
+.form-logo{
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem auto;
+}
+
+.form-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.form input{
+    display: block;
+    width: 60%;
+    padding: 0 3rem;
+    margin-bottom: 0.7rem;
+    background-color: white;
+    color: var(--first-color);
+    line-height: 2.5em; /*высота поля*/
+    border-width: 0; /*толщина обводки*/
+    border-radius: 1rem;
+}
+
+.form button{
+    display: block;
+    text-align: center;
+    max-width: 20rem;
+    margin-top: 1rem;
+    padding: 8px 2rem;
+    border-radius: 2rem;
+    border-width: 1rem;
+    border: 2px solid white;
+    color: white;
+    background-color: var(--first-color);
+    transition: 0.2s ease;
+}
+
+.form button:hover{
+    background-color: white;
+    color: black;
+}
+
+/*footer*/
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 23px;
+}
+
+.footer-info{ /*выравнить по горизонтали кнопку обратный звонок и адрес*/
+    display: flex;
+    align-items: center;
+}
+
+.footer-info span{
+    font-size: 16px;
+    margin-left: 103px;
+}
+
+.footer-info span:first-child{
+    font-size: 14px;
+    margin-left: 0;
+}
+
+.footer-info button{
+    font-size: 14px;
+    border-radius: 20px; /*скругление кнопки*/
+    border: 2px solid var(--first-color);
+    background-color: transparent; /*прозрачный фон*/
+    padding: 10px 25px;
+    margin-left: 36px; /*отодвинуть кнопку от номера телефона*/
+    transition: 0.2s ease; /*длительность анимации, в середине ускоряется*/
+    cursor: pointer; /*смена курсора при наведении на кнопку*/
+}
+
+.footer-info button:hover{ /*изменение при наведении на кнопку Обратный звонок*/
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+.social{
+    display: flex;
+    align-items: center; /*выравнивание элементов в блоке flex по центру, по вертикали*/
+    list-style-type: none; /*убрать точки списка*/
+    padding-left: 0; /*убираем встроенный отступ*/
+}
+
+.social-item{ /*делаем отступ между кнопками для соц сетей*/
+    margin-right: 20px;
+}
+
+.social-item:last-child { /*убрать у последней кнопки правый отступ*/
+    margin-right: 0;
+}
+
+.social-link{
+    display: block;
+    /*размеры кнопки для перехода по соц сетям*/
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--first-color); /*обводка у кнопки для перехода на соц сеть*/
+    border-radius: 100%; /*так как круглая кнопка*/
+    background-repeat: no-repeat; /*для того, чтобы картинка больше нигде не повторялась*/
+    background-position: center center; /*выравнить картинку по центру*/
+}
+
+
+/*выводим изображения кнопок для соц сетей в ссылки*/
+.social-link:hover { /*при нажатии на ссылку слегка делать темнее*/
+    background-color:rgb(155 216 156 / 0.1);
+}
+.social-youtube{
+    background-image: url(../img/youtube.svg);
+}
+.social-vk{
+    background-image: url(../img/vk.svg);
+}
+.social-fb{
+    background-image: url(../img/facebook.svg);
+}
+.social-instagram{
+    background-image: url(../img/ins.svg);
+}
+
+.footer-bottom{ /*под подвалом*/
+    display: flex;
+    justify-content: space-between;
+    color: #828282;
+    padding: 26px 0; /*расстояние сверху и снизу*/
+    font-size: 12px;
+}
+
+.footer-bottom p{
+    margin: 0;
+}
+
+.footer-bottom a{
+    text-decoration: none;
+    color: #828282;
+    transition: 0.2s ease;
+}
+
+.footer-bottom a:hover{ /*подцветка надписи при нажатии (политика конфидициальности)*/
+    color:var(--first-color);
+}
