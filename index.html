@@ -12,19 +12,17 @@
 </head>
 <body>
   <header>
-    <div class="menu">
-      <div class="menu-burger">
-        <span></span>
-      </div>
-      <nav>
-        <ul class="header-menu">
-          <li><a href="#Action" class="scroll-to">Акции</a></li>
-          <li><a href="#Delivery">Доставка</a></li>
-          <li><a href="#Review">Отзывы</a></li>
-          <li><a href="#QA">Вопрос - ответ</a></li>
-        </ul>
-      </nav>
+    <div id="menu-burger" class="menu-burger">
+      <span></span>
     </div>
+    <nav>
+      <ul id="header-menu" class="header-menu">
+        <li><a href="#Action" class="scroll-to">Акции</a></li>
+        <li><a href="#Delivery">Доставка</a></li>
+        <li><a href="#Review">Отзывы</a></li>
+        <li><a href="#QA">Вопрос - ответ</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -72,11 +70,11 @@
 
     <section class="up"></section>
 
-    <section class="catalog">
+    <section id="Action" class="catalog">
       <div class="wrapper">
         <div class="grid">
           <div class="grid-item grid-item-title">
-            <h2 class="title-h2" id="#Action">Специальные предложения</h2>
+            <h2 class="title-h2">Специальные предложения</h2>
           </div>
           <div class="grid-item grid-item-img">
             <img src="assets/img/car.svg" alt="Delivery">
@@ -148,9 +146,9 @@
 
     </section>
 
-    <section>
+    <section id="Delivery" class="delivery">
       <div class="wrapper">
-        <div class="title-form">Наше местоположение</div>
+        <div class="form-title">Наше местоположение</div>
         <div class="map">
           <img src="assets/img/map.png" alt="Map">
           <ul class="marker">
@@ -162,20 +160,7 @@
       </div>
     </section>
 
-    <section>
-      <div class="wrapper">
-        <form action="#" class="form-bottom">
-          <img class="form-logo" src="assets/img/logo.svg" alt="Logo">
-          <div class="title-form">Написать отзыв</div>
-          <input type="text" id="name" placeholder="Как к вам обращаться?" required>
-          <input type="text" id="phone" placeholder="Введите ваш номер телефона" required>
-          <input type="text" id="email" placeholder="Введите ваш email" required>
-          <input type="text" id="question" placeholder="Ваш отзыв" required>
-          <button type="submit" value="Отправить">Отправить отзыв</button>
-        </form>
-      </div>
-      
-    </section class="review">
+    <section id="Review" class="review">
       <div class="wrapper">
         <div class="flex">
           <div class="flex-item">
@@ -190,6 +175,21 @@
         </div>
       </div>
     </section>
+
+    <section id="QA">
+      <div class="wrapper">
+        <form action="#" class="form">
+          <img class="form-logo" src="assets/img/logo.svg" alt="Logo">
+          <div class="form-title">Написать отзыв</div>
+          <input type="text" id="name" placeholder="Как к вам обращаться?" required>
+          <input type="text" id="phone" placeholder="Введите ваш номер телефона" required>
+          <input type="text" id="email" placeholder="Введите ваш email" required>
+          <input type="text" id="question" placeholder="Ваш отзыв" required>
+          <button type="submit" value="Отправить">Отправить отзыв</button>
+        </form>
+      </div>
+    </section>  
+    
   </main>
 
   <footer>
@@ -220,7 +220,6 @@
     </div>
     
   </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="assets/js/menu.js"></script>
 </body>
 </html>

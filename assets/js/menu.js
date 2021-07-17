@@ -1,42 +1,32 @@
-$(document).ready(function() { //JQuery
-    $('.menu-burger').click(function() { /*если было нажатие на меню бургер*/
-        $('.menu-burger').toggleClass('open-menu'); /*добавим к блоку с меню дополнительный класс open-menu*/
-        $('.header-menu').toggleClass('open-menu');/*добавление класса open-menu к тегу nav*/
-        $('body').toggleClass('fixed-page');/*блокировка страницы при  открытом меню*/
-    });
-});
+//Меню-бургер на чистом JS
+document.getElementById("menu-burger").onclick = function(){
+  open()
+};
 
-// var $page = $('html, body');
-// $('a[href*="#Action"]').click(function() {
-//     $page.animate({
-//         scrollTop: $($.attr(this, 'href')).offset().top - 60
-//     }, 400);
-//     return false;
-// });
+function open(){
+  // document.getElementById("menu-burger").classList.toggle("open-menu");
+  // document.getElementById("header-menu").classList.toggle("open-menu");
+  // document.body.classList.toggle("fixed-page");
 
-// $("a.scroll-to").on("click", function(e){
-//     e.preventDefault();
-//     var anchor = $(this).attr('href');
-//     $('html, body').stop().animate({
-//         scrollTop: $(anchor).offset().top - 60
-//     }, 800);
-// });
+  document.getElementsByClassName("menu-burger")[0].classList.toggle("open-menu");
+  document.getElementsByClassName("header-menu")[0].classList.toggle("open-menu");
+  document.body.classList.toggle("fixed-page");
+}
 
+//Якорные ссылки на чистом JS
+const anchors = document.querySelectorAll('a[href*="#"]')
 
-/*якорные ссылки на чистом JS*/
-// const anchors = document.querySelectorAll('a.scroll-to')
-
-// for (let anchor of anchors) {
-//   anchor.addEventListener('click', function (e) {
-//     e.preventDefault()
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) { // каждому якорю присваиваем обработчик события
+    e.preventDefault() // убираем стандартное поведение
     
-//     const blockID = anchor.getAttribute('href')
+    const blockID = anchor.getAttribute('href').substr(1)
     
-//     document.querySelector(blockID).scrollIntoView({
-//       behavior: 'smooth',
-//       block: 'start'
-//     })
-//   })
-// }
+    document.getElementById(blockID).scrollIntoView({ //
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
 
 /*открытие и закрытие карточки*/
