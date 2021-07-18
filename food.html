@@ -12,19 +12,20 @@
 </head>
 <body>
   <header>
-    <div class="menu">
-      <div class="menu-burger">
+    <div class="menu" id="up">
+      <div id="menu-burger" class="menu-burger">
         <span></span>
       </div>
       <nav>
-        <ul class="header-menu">
-          <li><a href="#Action" class="scroll-to">Акции</a></li>
-          <li><a href="#Delivery">Доставка</a></li>
-          <li><a href="#Review">Отзывы</a></li>
-          <li><a href="#QA">Вопрос - ответ</a></li>
+        <ul id="header-menu" class="header-menu">
+          <li><a href="#Action" class="header-menu-item">Акции</a></li>
+          <li><a href="#Delivery" class="header-menu-item">Доставка</a></li>
+          <li><a href="#Review" class="header-menu-item">Отзывы</a></li>
+          <li><a href="#QA" class="header-menu-item">Вопрос - ответ</a></li>
         </ul>
       </nav>
     </div>
+    
   </header>
 
   <main>
@@ -45,12 +46,12 @@
             <div class="wrapper">
               <div class="header-bottom">
                 <ul class="nav">
-                  <li><a href="">Горячее</a></li>
-                  <li><a href="">Супы</a></li>
-                  <li><a href="">Салаты</a></li>
-                  <li><a href="">Гарниры</a></li>
-                  <li><a href="">Соусы</a></li>
-                  <li><a href="">Напитки</a></li>
+                  <li><a href="food.html">Горячее</a></li>
+                  <li><a href="food.html">Супы</a></li>
+                  <li><a href="food.html">Салаты</a></li>
+                  <li><a href="food.html">Гарниры</a></li>
+                  <li><a href="food.html">Соусы</a></li>
+                  <li><a href="food.html">Напитки</a></li>
                 </ul>
               </div>
             </div>
@@ -59,24 +60,15 @@
       </div>
     </section>
 
-    <section class="banner">
-      <!--класс с содержимым контента-->
-      <div class="wrapper">
-        <div class="text-banner">
-          <h1 class="title">Скидка в честь Дня Рождения</h1>
-          <p>При заказе в день своего рождения представляется скидка 20% (требуется показать курьеру подтверждающий документ с датой рождения)</p>
-          <a class="btn" href="#">Подробнее</a>
-        </div>
-      </div>
+    <section class="up">
+      <a href="#up"><span class="up-arrow"></span></a>
     </section>
 
-    <section class="up"></section>
-
-    <section class="catalog">
+    <section id="Action" class="catalog">
       <div class="wrapper">
         <div class="grid">
           <div class="grid-item grid-item-title">
-            <h2 class="title-h2" id="#Action">Специальные предложения</h2>
+            <h2 class="title-h2">Горячее</h2>
           </div>
           <div class="grid-item grid-item-img">
             <img src="assets/img/car.svg" alt="Delivery">
@@ -87,6 +79,7 @@
                 <img class="img-food" src="assets/img/lasagna.png" alt="Lasagna">
               </div>
               <p class="grid-title">Лазанья</p>
+              <p class="grid-describe"></p>
               <p class="grid-price">150 Р</p>
               <a class="grid-btn" href="#">Купить</a>
             </div>
@@ -148,9 +141,9 @@
 
     </section>
 
-    <section>
+    <section id="Delivery" class="delivery">
       <div class="wrapper">
-        <div class="title-form">Наше местоположение</div>
+        <h2 class="form-title">Наше местоположение</h2>
         <div class="map">
           <img src="assets/img/map.png" alt="Map">
           <ul class="marker">
@@ -162,11 +155,46 @@
       </div>
     </section>
 
-    <section>
+    <section id="Review" class="review">
       <div class="wrapper">
-        <form action="#" class="form-bottom">
-          <img class="form-logo" src="assets/img/Logo.svg" alt="">
-          <div class="title-form">Написать отзыв</div>
+        <h2 class="title-h1">Отзывы клиентов</h2>
+        <div class="flex">
+          <div class="flex-item">
+            <div class="flex-item__title"><h3>Иван Ивановский</h3></div>
+            <div class="flex-item__img">
+              <img src="assets/img/profile.jpg" alt="Profile-Photo">
+            </div>
+            <div class="flex-item__review">
+              <blockquote>"Все было очень вкусно"</blockquote>
+            </div>
+          </div>
+          <div class="flex-item">
+            <div class="flex-item__title"><h3>Петр Коваленко</h3></div>
+            <div class="flex-item__img">
+              <img src="assets/img/profile.jpg" alt="Profile-Photo">
+            </div>
+            <div class="flex-item__review">
+              <blockquote>"Все было очень вкусно"</blockquote>
+            </div>
+          </div>
+          <div class="flex-item">
+            <div class="flex-item__title"><h3>Никита Самойлов</h3></div>
+            <div class="flex-item__img">
+              <img src="assets/img/profile.jpg" alt="Profile-Photo">
+            </div>
+            <div class="flex-item__review">
+              <blockquote>"Все было очень вкусно"</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="QA">
+      <div class="wrapper">
+        <form action="#" class="form">
+          <img class="form-logo" src="assets/img/logo.svg" alt="Logo">
+          <div class="form-title">Написать отзыв</div>
           <input type="text" id="name" placeholder="Как к вам обращаться?" required>
           <input type="text" id="phone" placeholder="Введите ваш номер телефона" required>
           <input type="text" id="email" placeholder="Введите ваш email" required>
@@ -174,22 +202,8 @@
           <button type="submit" value="Отправить">Отправить отзыв</button>
         </form>
       </div>
-      
-    </section class="review">
-      <div class="wrapper">
-        <div class="flex">
-          <div class="flex-item">
-
-          </div>
-          <div class="flex-item">
-            
-          </div>
-          <div class="flex-item">
-            
-          </div>
-        </div>
-      </div>
-    </section>
+    </section>  
+    
   </main>
 
   <footer>
@@ -220,7 +234,6 @@
     </div>
     
   </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="assets/js/menu.js"></script>
 </body>
 </html>

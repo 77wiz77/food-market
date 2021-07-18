@@ -12,16 +12,17 @@
 </head>
 <body>
   <header>
+    <div class="start" id="up"></div>
     <div class="menu">
       <div id="menu-burger" class="menu-burger">
         <span></span>
       </div>
       <nav>
         <ul id="header-menu" class="header-menu">
-          <li><a href="#Action" class="scroll-to">Акции</a></li>
-          <li><a href="#Delivery">Доставка</a></li>
-          <li><a href="#Review">Отзывы</a></li>
-          <li><a href="#QA">Вопрос - ответ</a></li>
+          <li><a href="#Action" class="header-menu-item">Акции</a></li>
+          <li><a href="#Delivery" class="header-menu-item">Доставка</a></li>
+          <li><a href="#Review" class="header-menu-item">Отзывы</a></li>
+          <li><a href="#QA" class="header-menu-item">Вопрос - ответ</a></li>
         </ul>
       </nav>
     </div>
@@ -46,12 +47,12 @@
             <div class="wrapper">
               <div class="header-bottom">
                 <ul class="nav">
-                  <li><a href="">Горячее</a></li>
-                  <li><a href="">Супы</a></li>
-                  <li><a href="">Салаты</a></li>
-                  <li><a href="">Гарниры</a></li>
-                  <li><a href="">Соусы</a></li>
-                  <li><a href="">Напитки</a></li>
+                  <li><a href="#">Горячее</a></li>
+                  <li><a href="#">Супы</a></li>
+                  <li><a href="#">Салаты</a></li>
+                  <li><a href="#">Гарниры</a></li>
+                  <li><a href="#">Соусы</a></li>
+                  <li><a href="#">Напитки</a></li>
                 </ul>
               </div>
             </div>
@@ -72,7 +73,7 @@
     </section>
 
     <section class="up">
-      
+      <a href="#up"><span class="up-arrow"></span></a>
     </section>
 
     <section id="Action" class="catalog">
@@ -90,6 +91,7 @@
                 <img class="img-food" src="assets/img/lasagna.png" alt="Lasagna">
               </div>
               <p class="grid-title">Лазанья</p>
+              <p class="grid-describe"></p>
               <p class="grid-price">150 Р</p>
               <a class="grid-btn" href="#">Купить</a>
             </div>
@@ -153,7 +155,7 @@
 
     <section id="Delivery" class="delivery">
       <div class="wrapper">
-        <div class="form-title">Наше местоположение</div>
+        <h2 class="form-title">Наше местоположение</h2>
         <div class="map">
           <img src="assets/img/map.png" alt="Map">
           <ul class="marker">
@@ -167,15 +169,34 @@
 
     <section id="Review" class="review">
       <div class="wrapper">
+        <h2 class="title-h1">Отзывы клиентов</h2>
         <div class="flex">
           <div class="flex-item">
-
+            <div class="flex-item__title"><h3>Иван Ивановский</h3></div>
+            <div class="flex-item__img">
+              <img src="assets/img/profile.jpg" alt="Profile-Photo">
+            </div>
+            <div class="flex-item__review">
+              <blockquote>"Все было очень вкусно"</blockquote>
+            </div>
           </div>
           <div class="flex-item">
-            
+            <div class="flex-item__title"><h3>Петр Коваленко</h3></div>
+            <div class="flex-item__img">
+              <img src="assets/img/profile.jpg" alt="Profile-Photo">
+            </div>
+            <div class="flex-item__review">
+              <blockquote>"Все было очень вкусно"</blockquote>
+            </div>
           </div>
           <div class="flex-item">
-            
+            <div class="flex-item__title"><h3>Никита Самойлов</h3></div>
+            <div class="flex-item__img">
+              <img src="assets/img/profile.jpg" alt="Profile-Photo">
+            </div>
+            <div class="flex-item__review">
+              <blockquote>"Все было очень вкусно"</blockquote>
+            </div>
           </div>
         </div>
       </div>
@@ -187,8 +208,8 @@
           <img class="form-logo" src="assets/img/logo.svg" alt="Logo">
           <div class="form-title">Написать отзыв</div>
           <input type="text" id="name" placeholder="Как к вам обращаться?" required>
-          <input type="text" id="phone" placeholder="Введите ваш номер телефона" required>
-          <input type="text" id="email" placeholder="Введите ваш email" required>
+          <input type="text" id="phone" placeholder="Введите номер телефона" required>
+          <input type="text" id="email" placeholder="Введите email" required>
           <input type="text" id="question" placeholder="Ваш отзыв" required>
           <button type="submit" value="Отправить">Отправить отзыв</button>
         </form>

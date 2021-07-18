@@ -3,25 +3,32 @@
 //Переменные
 $first-color: #e2177c
 $background-color: #EFEFEF
+$font-size: 16px
+
+@function rem($pixels, $context: $font-size)
+  @return #{$pixels / $context}rem
 
 body
   background-color: $background-color
   font-family: 'Roboto', sans-serif
   color: #333333
-  font-size: 16px
+  font-size: $font-size
 
 main
   margin-top: 3.25rem
 
 .wrapper
-  max-width: 1100px
+  max-width: rem(1100px)
   padding: 0 1rem
   margin: 0 auto
+
+.start
+  padding-top: 0.2rem
 
 .header
   background-color: white
   padding-top: inherit
-  padding-top: 4px
+  padding-top: rem(4px)
   &-menu
     position: fixed
     width: 100%
@@ -34,7 +41,7 @@ main
     margin: 0
     flex-wrap: wrap
     > li
-      margin: 10px 1rem
+      margin: rem(10px) 1rem
       > a
         text-decoration: none
         color: white
@@ -45,40 +52,40 @@ main
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 15px 0px 12px 0
+    padding: rem(15px) 0 rem(12px) 0
   &-info
     span
       font-size: 16px
     button
       font-size: 14px
-      border-radius: 20px; 
+      border-radius: rem(20px); 
       border: 2px solid $first-color
       background-color: transparent
-      padding: 10px 25px
-      margin-left: 36px
+      padding: rem(10px) rem(25px)
+      margin-left: rem(36px)
       transition: 0.2s ease
       cursor: pointer
       &:hover
         background-color: $first-color
         color: white
   &-bottom
-    padding: 20px 0 17px 0
+    padding: rem(20px) 0 (17px) 0
     .nav
       font-size: 16px
       margin: 0
       > li
-        margin: 0 20px
-        margin-bottom: 10px
+        margin: 0 rem(20px)
+        margin-bottom: rem(10px)
 
 .nav
   display: flex
   list-style-type: none
   justify-content: center
-  padding: 4px 0
+  padding: rem(4px) 0
   flex-wrap: wrap
-  margin-bottom: 4px
+  margin-bottom: rem(4px)
   > li 
-    margin: 10px 1rem
+    margin: rem(10px) 1rem
     > a
       text-decoration: none
       color: #333333
@@ -95,8 +102,8 @@ main
   letter-spacing: 4px
   &-image
     display: block
-    width: 80px
-    height: 80px
+    width: rem(80px)
+    height: rem(80px)
     background-image: url(../img/logo.svg)
     margin-right: 20px
 
@@ -135,7 +142,7 @@ hr
     font-weight: 700
 
 .btn
-  color:white
+  color: white
   text-decoration: none
   border-radius: 20px
   border: 2px solid white
@@ -184,8 +191,8 @@ hr
       padding: 8px 0
 
 .catalog
-  padding-top: 2rem
-  padding-bottom: 3rem
+  padding-top: 4rem
+  padding-bottom: 2rem
 
 .grid
   display: grid
@@ -243,13 +250,16 @@ hr
   margin-bottom: 14px
 
 /*Расположение / карта*/
+.delivery
+  padding-top: 4rem
+
 .map
   display: flex
   flex-direction: column
   justify-content: center
   background-color: white
   margin-top: 2.2rem
-  margin-bottom: 4rem
+  margin-bottom: 2rem
   img
     width: 100%
     height: 100%
@@ -280,6 +290,48 @@ hr
   margin-bottom: 1rem
   margin-right: 5px
 
+
+//Отзывы
+.review
+  padding-top: 4rem
+
+.flex
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: space-between
+  //временные оступы
+  margin: 2rem -20px 10rem
+  &-item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: $first-color
+    width: 100%
+    margin: 0 20px
+    padding: 10px 0
+    line-width: 1px
+    &__title
+      font-size: $font-size
+      text-align: center
+      padding: 10px 20px
+      color: white
+    &__img
+      img
+        width: 100%
+        height: 70%
+    &__review
+      text-align: center
+      blockquote
+        color: white
+        max-width: rem(200px)
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        margin: 0
+        padding: 30px 0
+
 /*Форма*/
 
 .form
@@ -288,10 +340,10 @@ hr
   justify-content: center
   align-items: center
   margin: auto
-  width: 50%
+  width: 100%
   color: white
   background-color: $first-color
-  padding: 2rem
+  padding: 1rem 0 2rem
   margin-bottom: 4rem
   &-logo
     width: 10rem
@@ -371,7 +423,6 @@ hr
         color: $first-color
     p
       margin: 0
-  
 
 /*выводим изображения кнопок для соц сетей в ссылки*/
 .social
@@ -394,11 +445,27 @@ hr
     &:hover
       background-color: $first-color
   &-youtube
-    background-image: url(../img/youtube.svg)
+    background-image: url(../img/icons/youtube.svg)
   &-vk
-    background-image: url(../img/vk.svg)
+    background-image: url(../img/icons/vk.svg)
   &-fb
-    background-image: url(../img/facebook.svg)
+    background-image: url(../img/icons/facebook.svg)
   &-instagram
-    background-image: url(../img/ins.svg)
-  
+    background-image: url(../img/icons/ins.svg)
+
+.up
+  position: fixed
+  display: block
+  width: rem(48px)
+  height: rem(48px)
+  bottom: 10%
+  right: 10%
+  &-arrow
+    background-image: url(../img/icons/arrow.svg)
+    background-position: center center
+    background-repeat: no-repeat
+    cursor: pointer
+    border-radius: 100%
+    box-shadow: 0 0 rem(10px) rgba(0,0,0,0.5);
+    padding: 30px 40px
+    background-color: white

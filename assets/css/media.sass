@@ -46,6 +46,28 @@ $background-color: #EFEFEF
       &-item 
         /*ширина блока, относительно внешнего блока*/
         flex: 0 0 75%
+  
+  .flex
+    flex-direction: column
+    margin: -20px 0
+    &-item
+      margin: 20px 0
+      &:first-child
+        margin-top: 3rem
+      &:last-child
+        margin-bottom: 5rem
+      &__img
+        img
+          align-items: center
+          width: 250px
+          height: 250px
+      &__review
+        text-align: center
+        blockquote
+          max-width: 500px
+          text-overflow: ellipsis
+          overflow: hidden
+          white-space: wrap
 
 @media(max-width: 1000px)
   .bg-purple-item 
@@ -216,6 +238,11 @@ $background-color: #EFEFEF
 
   .logo 
     margin-bottom: 20px
+
+  .up
+    bottom: 5%
+    &-arrow
+      padding: 20px 30px
 
 @media(max-width: 600px)
   .grid
