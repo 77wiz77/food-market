@@ -39,7 +39,7 @@
               <div class="logo"><a href="index.html"><span class="logo-image"></span></a><span>FOODMARKET</span></div>
               <div class="header-info">
                 <span>8 (999) 999-99-99</span>
-                <button type="button">Обратный звонок</button>
+                <a href="#QA" class="header-info-btn">Обратная связь</a>
               </div>
             </div>
             <!--тег для линии-->
@@ -68,7 +68,6 @@
         <div class="banner-text">
           <h1 class="title">Скидка в честь Дня Рождения</h1>
           <p>При заказе в день своего рождения представляется скидка 20% (требуется показать курьеру подтверждающий документ с датой рождения)</p>
-          <a class="btn" href="#">Подробнее</a>
         </div>
       </div>
     </section>
@@ -126,12 +125,13 @@
               <button class="grid-btn btn-modal">Выбрать</button>
             </div>
           </div>
+          <div class="grid-item grid-item-more"><a class="more" href="#more">Посмотреть все</a></div>
           <div class="grid-item grid-item-left">
             <div class="bg-purple">
               <div class="bg-purple-item">
-                <h3>Получайте бонусы <bg> и подарки</h3>
-                <p>Каждый месяц разыгрываем промокоды со скидкой</p>
-                <a class="btn" href="#up">Участвовать</a>
+                <h3>Промокоды за отзывы</h3>
+                <p>Пиши отзыв и получай промокоды со скидкой до 50%</p>
+                <a class="btn" href="#QA">Участвовать</a>
               </div>
                 <img class="bg-purple-img" src="assets/img/envelope.svg" alt="Envelope">
             </div>
@@ -141,7 +141,7 @@
               <div class="bg-purple-item">
                 <h3>Заходим к нам</h3>
                 <p>Всегда рады новым клиентам, <br> добро пожаловать</p>
-                <a class="btn" href="#up">Карта магазина</a>
+                <a class="btn" href="#Delivery">Местоположение</a>
               </div>
             </div>
           </div>
@@ -178,49 +178,52 @@
 
     <section id="Review" class="review">
       <div class="wrapper">
-        <h2 class="title-h1">Отзывы клиентов</h2>
-        <div class="flex">
-          <div class="flex-item">
-            <div class="flex-item__title"><h3>Иван Ивановский</h3></div>
-            <div class="flex-item__img">
-              <img src="assets/img/profile.jpg" alt="Profile-Photo">
+        <div class="more-flex">
+          <h2 class="title-h2">Отзывы клиентов</h2>
+          <div class="flex">
+            <div class="flex-item">
+              <div class="flex-item__title"><h3>Иван Ивановский</h3></div>
+              <div class="flex-item__img">
+                <img src="assets/img/profile.jpg" alt="Profile-Photo">
+              </div>
+              <div class="flex-item__review">
+                <blockquote>"Все было очень вкусно"</blockquote>
+              </div>
             </div>
-            <div class="flex-item__review">
-              <blockquote>"Все было очень вкусно"</blockquote>
+            <div class="flex-item">
+              <div class="flex-item__title"><h3>Петр Коваленко</h3></div>
+              <div class="flex-item__img">
+                <img src="assets/img/profile.jpg" alt="Profile-Photo">
+              </div>
+              <div class="flex-item__review">
+                <blockquote>"Все было очень вкусно"</blockquote>
+              </div>
+            </div>
+            <div class="flex-item">
+              <div class="flex-item__title"><h3>Никита Самойлов</h3></div>
+              <div class="flex-item__img">
+                <img src="assets/img/profile.jpg" alt="Profile-Photo">
+              </div>
+              <div class="flex-item__review">
+                <blockquote>"Все было очень вкусно"</blockquote>
+              </div>
             </div>
           </div>
-          <div class="flex-item">
-            <div class="flex-item__title"><h3>Петр Коваленко</h3></div>
-            <div class="flex-item__img">
-              <img src="assets/img/profile.jpg" alt="Profile-Photo">
-            </div>
-            <div class="flex-item__review">
-              <blockquote>"Все было очень вкусно"</blockquote>
-            </div>
-          </div>
-          <div class="flex-item">
-            <div class="flex-item__title"><h3>Никита Самойлов</h3></div>
-            <div class="flex-item__img">
-              <img src="assets/img/profile.jpg" alt="Profile-Photo">
-            </div>
-            <div class="flex-item__review">
-              <blockquote>"Все было очень вкусно"</blockquote>
-            </div>
-          </div>
+          <a class="more" href="#more">Посмотреть все</a>
         </div>
       </div>
     </section>
 
     <section id="QA">
       <div class="wrapper">
-        <form action="#" class="form">
+        <form action="index.html" class="form" method="">
           <img class="form-logo" src="assets/img/logo.svg" alt="Logo">
-          <div class="form-title">Написать отзыв</div>
-          <input type="text" id="name" placeholder="Как к вам обращаться?" required>
-          <input type="text" id="phone" placeholder="Введите номер телефона" required>
-          <input type="text" id="email" placeholder="Введите email" required>
-          <input type="text" id="question" placeholder="Ваш отзыв" required>
-          <button type="submit" value="Отправить">Отправить отзыв</button>
+          <div class="form-title">Обратная связь</div>
+          <input type="text" name="name" placeholder="Как к вам обращаться?" required>
+          <input type="number" name="phone" placeholder="Введите номер телефона" required>
+          <input type="email" name="email" placeholder="Введите email" required>
+          <input type="text" name="question" placeholder="Ваше сообщение" required>
+          <button type="submit" value="Отправить">Отправить</button>
         </form>
       </div>
     </section>  
@@ -242,7 +245,6 @@
           <div class="footer-info">
             <span>222000, ул. Ленина 100</span>
             <span>8 (999) 999-99-99</span>
-            <button type="button">Обратный звонок</button>
           </div>
         </div>
       </div>

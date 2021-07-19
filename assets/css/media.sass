@@ -12,13 +12,16 @@ $background-color: #EFEFEF
         grid-column: 1 / 3
       &-img
         display: none
+      &-more
+        grid-column: 1 / 3
+        grid-row: 4 / 5
       &-left
         grid-column: 1 / 2
-        grid-row: 4 / 5
+        grid-row: 5 / 6
         margin-top: 50px
       &-right
         grid-column: 2 / 3
-        grid-row: 4 / 5
+        grid-row: 5 / 6
         margin-top: 50px
     &-title
       font-size: 1.2em
@@ -55,7 +58,7 @@ $background-color: #EFEFEF
       &:first-child
         margin-top: 3rem
       &:last-child
-        margin-bottom: 5rem
+        margin-bottom: 1rem
       &__img
         img
           align-items: center
@@ -275,6 +278,9 @@ $background-color: #EFEFEF
       &-title, &-left
         /*отображать заголовок и зеленую карточку по всей длине*/
         grid-column: 1 / 2
+      &-more
+        grid-column: 1 / 2
+        grid-row: 6 / 7
       &-left
         /*зеленая карточка*/
         grid-row: inherit

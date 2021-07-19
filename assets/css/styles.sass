@@ -57,8 +57,10 @@ main
   &-info
     span
       font-size: 16px
-    button
+    &-btn
       font-size: 14px
+      text-decoration: none
+      color: black
       border-radius: rem(20px); 
       border: 2px solid $first-color
       background-color: transparent
@@ -214,13 +216,22 @@ hr
       grid-column: 4 / 5
       grid-row: 1 / 2
       text-align: center
+    &-more
+      grid-column: 1 / 5
+      grid-row: 3 / 4
+      text-align: right
+      a
+        text-decoration: none
+        color: black
+      &:hover
+        text-decoration: underline
     &-left
       grid-column: 1 / 3
-      grid-row: 3 / 4
+      grid-row: 4 / 5
       margin-top: 40px
     &-right
       grid-column: 3 / 5
-      grid-row: 3 / 4
+      grid-row: 4 / 5
       margin-top: 40px
     &-catalog
       text-align: center
@@ -309,7 +320,7 @@ hr
   align-items: center
   justify-content: space-between
   //временные оступы
-  margin: 2rem -20px 10rem
+  margin: 2rem -20px 0
   &-item
     display: flex
     flex-direction: column
@@ -374,6 +385,7 @@ hr
   button
     display: block
     text-align: center
+    text-decoration: none
     max-width: 20rem
     margin-top: 1rem
     padding: 8px 2rem
@@ -550,3 +562,17 @@ hr
           background-color: white
           border: 2px solid black
           color: black
+
+
+.more-flex
+  display: flex;
+  flex-flow: nowrap column
+  .title-h2
+    margin-bottom: 0
+  .more
+    text-decoration: none
+    text-align: right
+    color: black
+    margin: 1rem 0 10rem
+    &:hover
+      text-decoration: underline
