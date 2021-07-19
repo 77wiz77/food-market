@@ -19,6 +19,7 @@
       </div>
       <nav>
         <ul id="header-menu" class="header-menu">
+          <li><a href="#up" class="header-menu-item">Главная</a></li>
           <li><a href="#Action" class="header-menu-item">Акции</a></li>
           <li><a href="#Delivery" class="header-menu-item">Доставка</a></li>
           <li><a href="#Review" class="header-menu-item">Отзывы</a></li>
@@ -35,7 +36,7 @@
         <div class="header">
           <div class="wrapper">
             <div class="header-top">
-              <div class="logo"><span class="logo-image"></span> <span>FOODMARKET</span></div>
+              <div class="logo"><a href="index.html"><span class="logo-image"></span></a><span>FOODMARKET</span></div>
               <div class="header-info">
                 <span>8 (999) 999-99-99</span>
                 <button type="button">Обратный звонок</button>
@@ -47,12 +48,12 @@
             <div class="wrapper">
               <div class="header-bottom">
                 <ul class="nav">
-                  <li><a href="#">Горячее</a></li>
-                  <li><a href="#">Супы</a></li>
-                  <li><a href="#">Салаты</a></li>
-                  <li><a href="#">Гарниры</a></li>
-                  <li><a href="#">Соусы</a></li>
-                  <li><a href="#">Напитки</a></li>
+                  <li><a href="food.html">Горячее</a></li>
+                  <li><a href="food.html">Супы</a></li>
+                  <li><a href="food.html">Салаты</a></li>
+                  <li><a href="food.html">Гарниры</a></li>
+                  <li><a href="food.html">Соусы</a></li>
+                  <li><a href="food.html">Напитки</a></li>
                 </ul>
               </div>
             </div>
@@ -91,9 +92,8 @@
                 <img class="img-food" src="assets/img/lasagna.png" alt="Lasagna">
               </div>
               <p class="grid-title">Лазанья</p>
-              <p class="grid-describe"></p>
               <p class="grid-price">150 Р</p>
-              <a class="grid-btn" href="#">Купить</a>
+              <button class="grid-btn btn-modal">Выбрать</button>
             </div>
           </div>
           <div class="grid-item grid-item-catalog">
@@ -103,7 +103,7 @@
               </div>
               <p class="grid-title">Котлета по-киевски</p>
               <p class="grid-price">150 Р</p>
-              <a class="grid-btn" href="#">Купить</a>
+              <button class="grid-btn btn-modal">Выбрать</button>
             </div>
           </div>
           <div class="grid-item grid-item-catalog">
@@ -113,7 +113,7 @@
               </div>
               <p class="grid-title">Суп с фрикадельками</p>
               <p class="grid-price">150 Р</p>
-              <a class="grid-btn" href="#">Купить</a>
+              <button class="grid-btn btn-modal">Выбрать</button>
             </div>
           </div>
           <div class="grid-item grid-item-catalog">
@@ -123,7 +123,7 @@
               </div>
               <p class="grid-title">Рыбные тефтели</p>
               <p class="grid-price">200 Р</p>
-              <a class="grid-btn" href="#">Купить</a>
+              <button class="grid-btn btn-modal">Выбрать</button>
             </div>
           </div>
           <div class="grid-item grid-item-left">
@@ -131,7 +131,7 @@
               <div class="bg-purple-item">
                 <h3>Получайте бонусы <bg> и подарки</h3>
                 <p>Каждый месяц разыгрываем промокоды со скидкой</p>
-                <input type="email" placeholder="Введите e-mail">
+                <a class="btn" href="#up">Учавствовать</a>
               </div>
                 <img class="bg-purple-img" src="assets/img/envelope.svg" alt="Envelope">
             </div>
@@ -141,7 +141,7 @@
               <div class="bg-purple-item">
                 <h3>Заходим к нам</h3>
                 <p>Всегда рады новым клиентам, <br> добро пожаловать</p>
-                <a class="btn" href="#">Карта магазина</a>
+                <a class="btn" href="#up">Карта магазина</a>
               </div>
             </div>
           </div>
@@ -149,8 +149,17 @@
       </div>
     </section>
 
-    <section class="modal-window">
-
+    <section class="modal" id="modal">
+      <div class="modal-flex">
+        <span class="modal-flex__close">×</span>
+        <div class="modal-flex__img">
+          <img src="assets/img/lasagna.png" alt="Lasagna">
+        </div>
+        <div class="modal-flex__title"><h2>Лазанья</h2></div>
+        <div class="modal-flex__price">150 Р</div>
+        <div class="modal-flex__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro impedit quisquam quaerat consectetur deserunt quia facere corrupti sint iste ratione odit consequuntur mollitia eligendi soluta sapiente! Accusamus, eaque dolor.</div>
+        <div class="modal-flex__btn"><a href="">Купить</a></div>
+      </div>
     </section>
 
     <section id="Delivery" class="delivery">
@@ -224,10 +233,10 @@
         <div class="footer-top">
           <div class="footer-top-item">
             <ul class="social">
-              <li class="social-item"><a class="social-link social-youtube" href="#" target="_blank"></a></li>
-              <li class="social-item"><a class="social-link social-vk" href="#" target="_blank"></a></li>
-              <li class="social-item"><a class="social-link social-fb" href="#" target="_blank"></a></li>
-              <li class="social-item"><a class="social-link social-instagram" href="#" target="_blank"></a></li>
+              <li class="social-item"><a class="social-link social-youtube" href="index.html" target="_blank"></a></li>
+              <li class="social-item"><a class="social-link social-vk" href="index.html" target="_blank"></a></li>
+              <li class="social-item"><a class="social-link social-fb" href="index.html" target="_blank"></a></li>
+              <li class="social-item"><a class="social-link social-instagram" href="index.html" target="_blank"></a></li>
             </ul>
           </div>
           <div class="footer-info">
@@ -247,5 +256,7 @@
     
   </footer>
   <script src="assets/js/menu.js"></script>
+  <script src="assets/js/archor.js"></script>
+  <script src="assets/js/modal.js"></script>
 </body>
 </html>
