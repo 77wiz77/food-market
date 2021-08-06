@@ -1,4 +1,3 @@
-"use strict"
 //Меню-бургер на чистом JS
 document.getElementById("menu-burger").onclick = function(){
   open()
@@ -16,6 +15,6 @@ function close(){
   if(document.getElementsByClassName("menu-burger open-menu")[0]&&document.getElementsByClassName("header-menu open-menu")[0]){
     document.getElementsByClassName("menu-burger open-menu")[0].classList.remove("open-menu");
     document.getElementsByClassName("header-menu open-menu")[0].classList.remove("open-menu");
-    document.body.classList.toggle("fixed-page");
+    document.body.classList.remove("fixed-page");
   }
 }
