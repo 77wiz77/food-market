@@ -1,261 +1,339 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FoodMarket</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/media.css">
-</head>
-<body>
-  <header>
-    <div class="start" id="up"></div>
-    <div class="menu">
-      <div id="menu-burger" class="menu-burger">
-        <span></span>
-      </div>
-      <nav>
-        <ul id="header-menu" class="header-menu">
-          <li><a href="#up" class="header-menu-item">Главная</a></li>
-          <li><a href="#Action" class="header-menu-item">Акции</a></li>
-          <li><a href="#Delivery" class="header-menu-item">Доставка</a></li>
-          <li><a href="#Review" class="header-menu-item">Отзывы</a></li>
-          <li><a href="#QA" class="header-menu-item">Вопрос - ответ</a></li>
-        </ul>
-      </nav>
-    </div>
-    
-  </header>
-
-  <main>
-    <section class="second-menu">
-      <div class="bg-white">
-        <div class="header">
-          <div class="wrapper">
-            <div class="header-top">
-              <div class="logo"><a href="index.html"><span class="logo-image"></span></a><span>FOODMARKET</span></div>
-              <div class="header-info">
-                <span>8 (999) 999-99-99</span>
-                <a href="#QA" class="header-info-btn">Обратная связь</a>
-              </div>
-            </div>
-            <hr>
-            <div class="wrapper">
-              <div class="header-bottom">
-                <ul class="nav">
-                  <li><a href="food.html">Горячее</a></li>
-                  <li><a href="food.html">Супы</a></li>
-                  <li><a href="food.html">Салаты</a></li>
-                  <li><a href="food.html">Гарниры</a></li>
-                  <li><a href="food.html">Соусы</a></li>
-                  <li><a href="food.html">Напитки</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+    <meta name="description" content="Доставка еды Food Market" />
+    <meta name="author" content="Food Market" />
+    <meta name="keywords" content="еда, доставка, food market, доставка еды" />
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <title>FoodMarket</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/media.css" />
+  </head>
+  <body>
+    <header>
+      <div class="start" id="up"></div>
+      <div class="menu">
+        <div id="menu-burger" class="menu-burger">
+          <span></span>
         </div>
-      </div>
-    </section>
-
-    <section class="banner">
-      <!--класс с содержимым контента-->
-      <div class="wrapper">
-        <div class="banner-text">
-          <h1 class="title">Скидка в честь Дня Рождения</h1>
-          <p>При заказе в день своего рождения представляется скидка 20% (требуется показать курьеру подтверждающий документ с датой рождения)</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="up">
-      <a href="#up"><span class="up-arrow"></span></a>
-    </section>
-
-    <section id="Action" class="catalog">
-      <div class="wrapper">
-        <div class="grid">
-          <div class="grid-item grid-item-title">
-            <h2 class="title-h2">Специальные предложения</h2>
-          </div>
-          <div class="grid-item grid-item-img">
-            <img src="assets/img/car.svg" alt="Delivery">
-          </div>
-          <div class="grid-item grid-item-catalog btn-modal">
-            <div class="bg-white">
-              <div class="thumb">
-                <img class="img-food" src="assets/img/lasagna.png" alt="Lasagna">
-              </div>
-              <p class="grid-title">Лазанья</p>
-              <p class="grid-price">150 Р</p>
-              <button class="grid-btn btn-modal">Выбрать</button>
-            </div>
-          </div>
-          <div class="grid-item grid-item-catalog btn-modal">
-            <div class="bg-white">
-              <div class="thumb">
-                <img class="img-food" src="assets/img/kiev.png" alt="kiev">
-              </div>
-              <p class="grid-title">Котлета по-киевски</p>
-              <p class="grid-price">150 Р</p>
-              <button class="grid-btn btn-modal">Выбрать</button>
-            </div>
-          </div>
-          <div class="grid-item grid-item-catalog btn-modal">
-            <div class="bg-white">
-              <div class="thumb">
-                <img class="img-food" src="assets/img/soup.png" alt="Soup">
-              </div>
-              <p class="grid-title">Суп с фрикадельками</p>
-              <p class="grid-price">150 Р</p>
-              <button class="grid-btn btn-modal">Выбрать</button>
-            </div>
-          </div>
-          <div class="grid-item grid-item-catalog btn-modal">
-            <div class="bg-white">
-              <div class="thumb">
-                <img class="img-food" src="assets/img/meatball.png" alt="Meatball">
-              </div>
-              <p class="grid-title">Рыбные тефтели</p>
-              <p class="grid-price">200 Р</p>
-              <button class="grid-btn btn-modal">Выбрать</button>
-            </div>
-          </div>
-          <div class="grid-item grid-item-more"><a class="more" href="#more">Посмотреть все</a></div>
-          <div class="grid-item grid-item-left">
-            <div class="bg-purple">
-              <div class="bg-purple-item">
-                <h3>Промокоды за отзывы</h3>
-                <p>Пиши отзыв и получай промокоды со скидкой до 50%</p>
-                <a class="btn" href="#QA">Участвовать</a>
-              </div>
-                <img class="bg-purple-img" src="assets/img/envelope.svg" alt="Envelope">
-            </div>
-          </div>
-          <div class="grid-item grid-item-right">
-            <div class="bg-purple">
-              <div class="bg-purple-item">
-                <h3>Заходим к нам</h3>
-                <p>Всегда рады новым клиентам, <br> добро пожаловать</p>
-                <a class="btn" href="#Delivery">Местоположение</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="modal" id="modal">
-      <div class="modal-flex">
-        <span class="modal-flex__close">×</span>
-        <div class="modal-flex__img">
-          <img src="assets/img/lasagna.png" alt="Lasagna">
-        </div>
-        <div class="modal-flex__title"><h2>Лазанья</h2></div>
-        <div class="modal-flex__price">150 Р</div>
-        <div class="modal-flex__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro impedit quisquam quaerat consectetur deserunt quia facere corrupti sint iste ratione odit consequuntur mollitia eligendi soluta sapiente! Accusamus, eaque dolor.</div>
-        <div class="modal-flex__btn"><a href="">Купить</a></div>
-      </div>
-    </section>
-
-    <section id="Delivery" class="delivery">
-      <div class="wrapper">
-        <h2 class="form-title">Наше местоположение</h2>
-        <div class="map">
-          <img src="assets/img/map.png" alt="Map">
-          <ul class="marker">
-            <li><span class="in"> </span>В черте города от 500 руб доставка бесплатно</li>
-            <br>
-            <li><span class="out"> </span>За чертой города и ниже 500 руб - доставка: 150 руб</li>
+        <nav>
+          <ul id="header-menu" class="header-menu">
+            <li><a href="#up" class="header-menu-item">Главная</a></li>
+            <li><a href="#Action" class="header-menu-item">Акции</a></li>
+            <li><a href="#Delivery" class="header-menu-item">Доставка</a></li>
+            <li><a href="#Review" class="header-menu-item">Отзывы</a></li>
+            <li><a href="#QA" class="header-menu-item">Вопрос - ответ</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section id="Review" class="review">
-      <div class="wrapper">
-        <div class="more-flex">
-          <h2 class="title-h2">Отзывы клиентов</h2>
-          <div class="flex">
-            <div class="flex-item">
-              <div class="flex-item__title"><h3>Иван Ивановский</h3></div>
-              <div class="flex-item__img">
-                <img src="assets/img/profile.jpg" alt="Profile-Photo">
+    <main>
+      <section class="second-menu">
+        <div class="bg-white">
+          <div class="header">
+            <div class="wrapper">
+              <div class="header-top">
+                <div class="logo">
+                  <a href="index.html"><span class="logo-image"></span></a
+                  ><span>FOODMARKET</span>
+                </div>
+                <div class="header-info">
+                  <span>8 (999) 999-99-99</span>
+                  <a href="#QA" class="header-info-btn">Обратная связь</a>
+                </div>
               </div>
-              <div class="flex-item__review">
-                <blockquote>"Все было очень вкусно"</blockquote>
-              </div>
-            </div>
-            <div class="flex-item">
-              <div class="flex-item__title"><h3>Петр Коваленко</h3></div>
-              <div class="flex-item__img">
-                <img src="assets/img/profile.jpg" alt="Profile-Photo">
-              </div>
-              <div class="flex-item__review">
-                <blockquote>"Все было очень вкусно"</blockquote>
-              </div>
-            </div>
-            <div class="flex-item">
-              <div class="flex-item__title"><h3>Никита Самойлов</h3></div>
-              <div class="flex-item__img">
-                <img src="assets/img/profile.jpg" alt="Profile-Photo">
-              </div>
-              <div class="flex-item__review">
-                <blockquote>"Все было очень вкусно"</blockquote>
+              <hr />
+              <div class="wrapper">
+                <div class="header-bottom">
+                  <ul class="nav">
+                    <li><a href="food.html">Горячее</a></li>
+                    <li><a href="food.html">Супы</a></li>
+                    <li><a href="food.html">Салаты</a></li>
+                    <li><a href="food.html">Гарниры</a></li>
+                    <li><a href="food.html">Соусы</a></li>
+                    <li><a href="food.html">Напитки</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <a class="more" href="#more">Посмотреть все</a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="QA">
-      <div class="wrapper">
-        <form action="index.html" class="form" method="">
-          <img class="form-logo" src="assets/img/logo.svg" alt="Logo">
-          <div class="form-title">Обратная связь</div>
-          <input type="text" name="name" placeholder="Как к вам обращаться?" required>
-          <input type="number" name="phone" placeholder="Введите номер телефона" required>
-          <input type="email" name="email" placeholder="Введите email" required>
-          <input type="text" name="question" placeholder="Ваше сообщение" required>
-          <button type="submit" value="Отправить">Отправить</button>
-        </form>
-      </div>
-    </section>  
-    
-  </main>
+      <section class="banner">
+        <!--класс с содержимым контента-->
+        <div class="wrapper">
+          <div class="banner-text">
+            <h1 class="title">Скидка в честь Дня Рождения</h1>
+            <p>
+              При заказе в день своего рождения представляется скидка 20%
+              (требуется показать курьеру подтверждающий документ с датой
+              рождения)
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <footer>
-    <div class="bg-white">
-      <div class="wrapper">
-        <div class="footer-top">
-          <div class="footer-top-item">
-            <ul class="social">
-              <li class="social-item"><a class="social-link social-youtube" href="#" target="_blank"></a></li>
-              <li class="social-item"><a class="social-link social-vk" href="#" target="_blank"></a></li>
-              <li class="social-item"><a class="social-link social-fb" href="#" target="_blank"></a></li>
-              <li class="social-item"><a class="social-link social-instagram" href="#" target="_blank"></a></li>
+      <section class="up">
+        <a href="#up"><span class="up-arrow"></span></a>
+      </section>
+
+      <section id="Action" class="catalog">
+        <div class="wrapper">
+          <div class="grid">
+            <div class="grid-item grid-item-title">
+              <h2 class="title-h2">Специальные предложения</h2>
+            </div>
+            <div class="grid-item grid-item-img">
+              <img src="assets/img/car.svg" alt="Delivery" />
+            </div>
+            <div class="grid-item grid-item-catalog btn-modal">
+              <div class="bg-white">
+                <div class="thumb">
+                  <img
+                    class="img-food"
+                    src="assets/img/lasagna.png"
+                    alt="Lasagna"
+                  />
+                </div>
+                <p class="grid-title">Лазанья</p>
+                <p class="grid-price">150 Р</p>
+                <button class="grid-btn btn-modal">Выбрать</button>
+              </div>
+            </div>
+            <div class="grid-item grid-item-catalog btn-modal">
+              <div class="bg-white">
+                <div class="thumb">
+                  <img class="img-food" src="assets/img/kiev.png" alt="kiev" />
+                </div>
+                <p class="grid-title">Котлета по-киевски</p>
+                <p class="grid-price">150 Р</p>
+                <button class="grid-btn btn-modal">Выбрать</button>
+              </div>
+            </div>
+            <div class="grid-item grid-item-catalog btn-modal">
+              <div class="bg-white">
+                <div class="thumb">
+                  <img class="img-food" src="assets/img/soup.png" alt="Soup" />
+                </div>
+                <p class="grid-title">Суп с фрикадельками</p>
+                <p class="grid-price">150 Р</p>
+                <button class="grid-btn btn-modal">Выбрать</button>
+              </div>
+            </div>
+            <div class="grid-item grid-item-catalog btn-modal">
+              <div class="bg-white">
+                <div class="thumb">
+                  <img
+                    class="img-food"
+                    src="assets/img/meatball.png"
+                    alt="Meatball"
+                  />
+                </div>
+                <p class="grid-title">Рыбные тефтели</p>
+                <p class="grid-price">200 Р</p>
+                <button class="grid-btn btn-modal">Выбрать</button>
+              </div>
+            </div>
+            <div class="grid-item grid-item-more">
+              <a class="more" href="#more">Посмотреть все</a>
+            </div>
+            <div class="grid-item grid-item-left">
+              <div class="bg-purple">
+                <div class="bg-purple-item">
+                  <h3>Промокоды за отзывы</h3>
+                  <p>Пиши отзыв и получай промокоды со скидкой до 50%</p>
+                  <a class="btn" href="#QA">Участвовать</a>
+                </div>
+                <img
+                  class="bg-purple-img"
+                  src="assets/img/envelope.svg"
+                  alt="Envelope"
+                />
+              </div>
+            </div>
+            <div class="grid-item grid-item-right">
+              <div class="bg-purple">
+                <div class="bg-purple-item">
+                  <h3>Заходим к нам</h3>
+                  <p>
+                    Всегда рады новым клиентам, <br />
+                    добро пожаловать
+                  </p>
+                  <a class="btn" href="#Delivery">Местоположение</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="modal" id="modal">
+        <div class="modal-flex">
+          <span class="modal-flex__close">×</span>
+          <div class="modal-flex__img">
+            <img src="assets/img/lasagna.png" alt="Lasagna" />
+          </div>
+          <div class="modal-flex__title"><h2>Лазанья</h2></div>
+          <div class="modal-flex__price">150 Р</div>
+          <div class="modal-flex__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro
+            impedit quisquam quaerat consectetur deserunt quia facere corrupti
+            sint iste ratione odit consequuntur mollitia eligendi soluta
+            sapiente! Accusamus, eaque dolor.
+          </div>
+          <div class="modal-flex__btn"><a href="">Купить</a></div>
+        </div>
+      </section>
+
+      <section id="Delivery" class="delivery">
+        <div class="wrapper">
+          <h2 class="form-title">Наше местоположение</h2>
+          <div class="map">
+            <img src="assets/img/map.png" alt="Map" />
+            <ul class="marker">
+              <li>
+                <span class="in"> </span>В черте города от 500 руб доставка
+                бесплатно
+              </li>
+              <br />
+              <li>
+                <span class="out"> </span>За чертой города и ниже 500 руб -
+                доставка: 150 руб
+              </li>
             </ul>
           </div>
-          <div class="footer-info">
-            <span>222000, ул. Ленина 100</span>
-            <span>8 (999) 999-99-99</span>
+        </div>
+      </section>
+
+      <section id="Review" class="review">
+        <div class="wrapper">
+          <div class="more-flex">
+            <h2 class="title-h2">Отзывы клиентов</h2>
+            <div class="flex">
+              <div class="flex-item">
+                <div class="flex-item__title"><h3>Иван Ивановский</h3></div>
+                <div class="flex-item__img">
+                  <img src="assets/img/profile.jpg" alt="Profile-Photo" />
+                </div>
+                <div class="flex-item__review">
+                  <blockquote>"Все было очень вкусно"</blockquote>
+                </div>
+              </div>
+              <div class="flex-item">
+                <div class="flex-item__title"><h3>Петр Коваленко</h3></div>
+                <div class="flex-item__img">
+                  <img src="assets/img/profile.jpg" alt="Profile-Photo" />
+                </div>
+                <div class="flex-item__review">
+                  <blockquote>"Все было очень вкусно"</blockquote>
+                </div>
+              </div>
+              <div class="flex-item">
+                <div class="flex-item__title"><h3>Никита Самойлов</h3></div>
+                <div class="flex-item__img">
+                  <img src="assets/img/profile.jpg" alt="Profile-Photo" />
+                </div>
+                <div class="flex-item__review">
+                  <blockquote>"Все было очень вкусно"</blockquote>
+                </div>
+              </div>
+            </div>
+            <a class="more" href="#more">Посмотреть все</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="QA">
+        <div class="wrapper">
+          <form action="index.html" class="form" method="">
+            <img class="form-logo" src="assets/img/logo.svg" alt="Logo" />
+            <div class="form-title">Обратная связь</div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Как к вам обращаться?"
+              required
+            />
+            <input
+              type="number"
+              name="phone"
+              placeholder="Введите номер телефона"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Введите email"
+              required
+            />
+            <input
+              type="text"
+              name="question"
+              placeholder="Ваше сообщение"
+              required
+            />
+            <button type="submit" value="Отправить">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="bg-white">
+        <div class="wrapper">
+          <div class="footer-top">
+            <div class="footer-top-item">
+              <ul class="social">
+                <li class="social-item">
+                  <a
+                    class="social-link social-youtube"
+                    href="#"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li class="social-item">
+                  <a class="social-link social-vk" href="#" target="_blank"></a>
+                </li>
+                <li class="social-item">
+                  <a class="social-link social-fb" href="#" target="_blank"></a>
+                </li>
+                <li class="social-item">
+                  <a
+                    class="social-link social-instagram"
+                    href="#"
+                    target="_blank"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-info">
+              <span>222000, ул. Ленина 100</span>
+              <span>8 (999) 999-99-99</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="wrapper">
-      <div class="footer-bottom">
-        <p>ИП Example (с) 2019 Все права защищены. Магазин готовой еды</p>
-        <a href="#">Политика конфиденциальности</a>
+      <div class="wrapper">
+        <div class="footer-bottom">
+          <p>ИП Example (с) 2019 Все права защищены. Магазин готовой еды</p>
+          <a href="#">Политика конфиденциальности</a>
+        </div>
       </div>
-    </div>
-    
-  </footer>
-  <script src="assets/js/menu.js"></script>
-  <script src="assets/js/archor.js"></script>
-  <script src="assets/js/modal.js"></script>
-</body>
+    </footer>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/archor.js"></script>
+    <script src="assets/js/modal.js"></script>
+  </body>
 </html>
